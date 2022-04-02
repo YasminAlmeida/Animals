@@ -1,0 +1,303 @@
+body {
+  margin: 0;
+  background-color: #faf6ed;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffbb00;
+  margin-left: 8rem;
+  padding: 1rem;
+}
+
+header li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  letter-spacing: 0.1rem;
+}
+
+.container-animais ul {
+  list-style: none;
+  margin-left: 2rem;
+  padding: .857rem;
+}
+
+.container-animais {
+  position: relative;
+}
+
+.container-animais li {
+  cursor: pointer;
+}
+
+.animais {
+  height: 800px;
+  width: 500px;
+  overflow-y: scroll;
+  margin-right: 2rem;
+}
+
+.animais::-webkit-scrollbar {
+  width: 20px;
+}
+
+.animais::-webkit-scrollbar-thumb {
+  background-color: #FB5;
+  border-left: 4px solid #faf6ed;
+  border-right: 4px solid #faf6ed;
+}
+
+.animais li img {
+  display: block;
+  max-width: 100%;
+}
+
+.titulo {
+  font-size: 4rem;
+  margin-left: 10rem;
+  font-weight: normal;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: center;
+}
+
+.descricao {
+  max-width: max-content;
+}
+
+.descricao p {
+  font-size: 1.05rem;
+}
+
+.subtitulo {
+  color: #E54;
+  position: relative;
+  margin-left: 2rem;
+}
+
+.subtitulo::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 10px;
+  left: -35px;
+  top: 6px;
+  background-color: #ffbb00;
+}
+
+.container-faq {
+  margin-left: 20px;
+  grid-column: 1/-1;
+  justify-self: flex-start;
+}
+
+.container-faq h1 {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+.container-faq dt {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.container-faq dl dd {
+  margin-bottom: 20px;
+}
+
+.contato div {
+  grid-column: 1/-1;
+  align-items: center;
+}
+
+.contato h1 {
+  display: flex;
+  font-size: 2.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  justify-self: flex-start !important;
+  margin-left: 2rem;
+}
+
+figure img {
+  max-width: 550px;
+  padding-left: 20px;
+  margin-left: 80px;
+}
+
+.contato ul {
+  list-style: none;
+}
+
+.contato li a,
+.contato li {
+  text-decoration: none;
+  color: #111111;
+}
+
+footer {
+  background-color: #e4a30b;
+  padding: 3px;
+}
+
+footer p {
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+@media(max-width:1600px) {
+  body {
+    display: block;
+  }
+}
+
+@media(max-width:1200px) {
+
+  .animais {
+    max-height: 700px;
+    max-width: 400px;
+  }
+
+  .descricao {
+    margin-left: 90px;
+  }
+
+  .container-animais ul {
+    margin-left: 4rem;
+  }
+
+  .grid {
+    grid-template-columns: 400px 1fr;
+    justify-items: center;
+    justify-content: space-between;
+  }
+
+  @media(max-width:1000px) {
+
+    .animais {
+      max-height: 500px;
+      max-width: 300px;
+    }
+  }
+
+  header nav ul,
+  .container-animais ul {
+    margin-left: 4rem;
+  }
+}
+
+@media(max-width:800px) {
+  .grid {
+    grid-template-columns: 300px 3fr;
+    justify-items: center;
+  }
+
+  .animais {
+    height: 100%;
+    width: 80%;
+    margin: 0;
+  }
+
+  header nav ul,
+  .container-animais ul {
+    margin: 0;
+  }
+}
+
+@media (max-width:700px) {
+
+  .animais {
+    height: 100%;
+    width: 60%;
+  }
+
+  .descricao p {
+    font-size: 1.1rem;
+    margin-left: 20px;
+  }
+}
+
+@media(max-width:600px) {
+  .titulo {
+    font-size: 3rem;
+    margin-left: 2.5rem;
+  }
+
+  .descricao {
+    margin-left: 10px;
+  }
+}
+
+@media(max-width:450px) {
+  .titulo {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 150px 3fr;
+    justify-items: center;
+  }
+}
+
+.js-tabcontent div {
+  display: none;
+}
+
+.js-tabcontent div.ativo {
+  display: block !important;
+  animation: show .5s forwards;
+}
+
+@keyframes show {
+  from {
+    transform: translate3d(-30px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: (0, 0, 0);
+  }
+}
+
+.js-tabPerguntaFaq {
+  cursor: pointer;
+}
+
+.js-tabRespostaFaq {
+  display: none;
+}
+
+.js-tabRespostaFaq.ativo {
+  display: block !important;
+  animation: show .5s forwards;
+}
+
+.js-scroll {
+  opacity: 0;
+  transform: translate3d(-30, 0, 0);
+}
+
+.js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: .3s;
+}
+
+.rotated:hover {
+  display: inline-block;
+  transition: transform 0.2s;
+  transform: rotate(90deg);
+}
+
+.rotatedativo {
+  display: inline-block;
+  transition: transform 0.2s;
+  transform: rotate(90deg);
+}
