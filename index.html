@@ -14,15 +14,31 @@
 
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="#animais">ANIMAIS</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contato">CONTATO</a></li>
-        <li><a data-modal="abrir" href="login.html">LOGIN <span class="rotated">→</span></a></li>
-      </ul>
-    </nav>
+    <h1 class="titulo mobile">
+      ANIMAIS FANTÁSTICOS
+    </h1>
+    <div class="container-menu">
+      <button class="button-menu" id="menu-mobile"></button>
+      <nav data-modal="options-menu" class="options-menu">
+        <ul>
+          <li><a href="#animais">ANIMAIS</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li data-dropdown>
+            <a href="sobre.html">SOBRE</a>
+            <ul class="dropdown-menu">
+              <li><a href="empresa.html">EMPRESA</a></li>
+              <li><a href="equipe.html">EQUIPE</a></li>
+              <li><a href="socios.html">SÓCIOS</a></li>
+              <li><a href="investidores.html">INVESTIDORES</a></li>
+            </ul>
+          </li>
+          <li><a data-modal="abrir" href="login.html">LOGIN <span class="rotated">→</span></a></li>
+        </ul>
+      </nav>
+    </div>
+
   </header>
+
   <h1 class="titulo">
     ANIMAIS FANTÁSTICOS
   </h1>
@@ -117,11 +133,9 @@
     <section class="contato js-scroll" id="contato">
       <h1>Contato</h1>
       <div>
-        <div>
-          <figure data-tooltip aria-label="Localização">
-            <img src="./img/mapa.png" alt="" srcset="">
-          </figure>
-        </div>
+        <figure data-tooltip aria-label="Localização">
+          <img src="./img/mapa.png" alt="" srcset="">
+        </figure>
         <ul>
           <li class="subtitulo"><a href="">contato@origamid.com
             </a></li>
