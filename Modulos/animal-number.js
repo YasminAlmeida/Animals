@@ -13,5 +13,5 @@ export default function initAnimalNumber(){
         numero.innerText = total;
         clearInterval(timer);
       }
-    },0);
+    },60);
   });

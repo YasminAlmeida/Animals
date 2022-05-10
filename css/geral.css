@@ -110,7 +110,7 @@ nav li a {
 
 .container-faq dt {
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
 }
 
 .container-faq dl dd {
@@ -351,6 +351,7 @@ footer p {
 
 .js-tabRespostaFaq {
   display: none;
+  font-size: 1.3rem;
 }
 
 .js-tabRespostaFaq.ativo {
@@ -379,4 +380,26 @@ footer p {
   display: inline-block;
   transition: transform 0.2s;
   transform: rotate(90deg);
+}
+
+@media(max-width:700px) {
+  .js-tabRespostaFaq {
+    font-size: 1.2rem;
+  }
+}
+
+@media(max-width:600px) {
+  .container-faq dt {
+    font-size: 1.3rem;
+  }
+}
+
+@media(max-width:500px) {
+  .container-faq dt {
+    font-size: 1.2rem;
+  }
+
+  .js-tabRespostaFaq {
+    font-size: 1.1rem;
+  }
 }
