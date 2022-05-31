@@ -1,4 +1,4 @@
-import  initTabFaq  from './scroll-animacao.js';
+import initTabFaq from './scroll-animacao.js';
 import scrollSuave from './scroll-suave.js';
 import initTabNav from './TabNav.js';
 import initModal from './modal.js';

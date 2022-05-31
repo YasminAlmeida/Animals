@@ -1,26 +1,23 @@
-export default function initModal(){
+export default function initModal() {
   const botaoAbrir = document.querySelector('[data-modal="abrir"]');
   const botaoFechar = document.querySelector('[data-modal="fechar"]');
   const containerModal = document.querySelector('[data-modal="container"]');
   const flecha = document.querySelector('.rotated');
-  // console.log(botaoAbrir, botaoFechar, containerModal)
-  function abrirModal(event){
+  function abrirModal(event) {
     event.preventDefault();
     containerModal.classList.add('ativo');
     flecha.classList.add('rotatedativo');
   }
-  function fecharModal(event){
+  function fecharModal(event) {
     event.preventDefault();
     containerModal.classList.remove('ativo');
     flecha.classList.remove('rotatedativo');
-    console.log(event);
   }
-  function cliqueForaModal(event){
-    if(event.target === this);
+  function cliqueForaModal(event) {
+    if (event.target === this);
     fecharModal(event);
   }
-  
   botaoAbrir.addEventListener('click', abrirModal);
   botaoFechar.addEventListener('click', fecharModal);
-  containerModal.addEventListener('click', cliqueForaModal); 
+  containerModal.addEventListener('click', cliqueForaModal);
 }

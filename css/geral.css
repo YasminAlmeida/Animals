@@ -143,25 +143,20 @@ figure img {
   text-decoration: none;
   color: #111111;
 }
-
 footer {
   background-color: #e4a30b;
   padding: 3px;
 }
-
 footer p {
   font-size: 1.05rem;
   font-weight: bold;
 }
-
 @media(max-width:1600px) {
   body {
     display: block;
   }
 }
-
 @media(max-width:1200px) {
-
   .animais {
     max-height: 700px;
     max-width: 400px;
@@ -170,235 +165,188 @@ footer p {
   .descricao {
     margin-left: 50px;
   }
-
   .grid {
     grid-template-columns: 400px 1fr;
     justify-items: center;
     justify-content: space-between;
   }
-
   @media(max-width:1000px) {
-
     .animais {
       max-height: 500px;
       max-width: 300px;
     }
   }
-
   header nav ul {
     margin-left: 4rem;
   }
 }
-
 @media(max-width:800px) {
   .grid {
     grid-template-columns: 200px 1fr;
     justify-items: center;
     margin-top: 50px;
   }
-
   .animais {
     height: 100%;
     width: 80%;
     margin: 0;
   }
-
   header nav ul,
   .container-animais ul {
     margin: 0;
   }
-
   figure img {
     max-width: 400px;
   }
 }
-
 @media (max-width:700px) {
-
   .animais {
     height: 100%;
     width: 60%;
   }
-
   .descricao p {
     font-size: 1.2rem;
     margin-left: 0px;
   }
 }
-
 @media(max-width:600px) {
   .titulo {
     font-size: 3rem;
     margin-left: 2.5rem;
   }
-
   .descricao {
     margin-left: 4px;
   }
-
 }
-
 @media(max-width:570px) {
   .descricao p {
     font-size: 1.1rem;
   }
 }
-
 @media(max-width:520px) {
   .descricao p {
     font-size: 1rem;
   }
 }
-
 @media(max-width:480px) {
   header {
     display: flex;
+    flex-direction: row-reverse;
   }
-
   .titulo {
     display: none;
   }
-
   .mobile {
     display: inline;
     font-size: 2rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
   }
-
   header nav {
     display: none;
   }
-
   figure img {
     max-width: 300px;
   }
-
   .grid {
     grid-template-columns: 150px 3fr;
     justify-items: center;
   }
-
   .container-animais {
     overflow: hidden;
   }
-
   .animais {
     width: 110px;
   }
 }
-
 @media(max-width:390px) {
   figure img {
     max-width: 230px;
   }
-
   .mobile {
     display: inline;
     font-size: 1.5rem;
-    margin-left: 1.5rem;
     margin-top: 40px;
   }
-
   .descricao {
     overflow-y: scroll;
     height: 500px;
   }
-
   .descricao p {
     font-size: 0.9rem;
   }
-
   header {
     align-items: center;
   }
 }
-
 @media(max-width:350px) {
   .animais {
     width: 105px;
     height: 600px;
   }
-
-
   .descricao p {
     font: 0.8rem;
   }
 }
-
 .js-tabcontent div {
   display: none;
 }
-
 .js-tabcontent div.ativo {
   display: block !important;
   animation: show .5s forwards;
 }
-
 @keyframes show {
   from {
     transform: translate3d(-30px, 0, 0);
   }
-
   to {
     opacity: 1;
     transform: (0, 0, 0);
   }
 }
-
 .js-tabPerguntaFaq {
   cursor: pointer;
 }
-
 .js-tabRespostaFaq {
   display: none;
   font-size: 1.3rem;
 }
-
 .js-tabRespostaFaq.ativo {
   display: block !important;
   animation: show .5s forwards;
 }
-
 .js-scroll {
   opacity: 0;
   transform: translate3d(-30, 0, 0);
 }
-
 .js-scroll.ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: .3s;
 }
-
 .rotated:hover {
   display: inline-block;
   transition: transform 0.2s;
   transform: rotate(90deg);
 }
-
 .rotatedativo {
   display: inline-block;
   transition: transform 0.2s;
   transform: rotate(90deg);
 }
-
 @media(max-width:700px) {
   .js-tabRespostaFaq {
     font-size: 1.2rem;
   }
 }
-
 @media(max-width:600px) {
   .container-faq dt {
     font-size: 1.3rem;
   }
 }
-
 @media(max-width:500px) {
   .container-faq dt {
     font-size: 1.2rem;
   }
-
   .js-tabRespostaFaq {
     font-size: 1.1rem;
   }

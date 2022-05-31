@@ -1,14 +1,14 @@
-export default function initMenu(){ 
-  const botao = document.getElementById('menu-mobile');    
+export default function initMenu() {
+  const botao = document.getElementById('menu-mobile');
   const options = document.querySelector('.options-menu');
-  botao.addEventListener('click', abrirModal);
-  function abrirModal(event){
+  function abrirModal(event) {
     event.preventDefault();
     botao.classList.add('ativo');
     if (options.classList.contains('ativo')) {
       options.classList.remove('ativo');
-    }else{
+    } else {
       options.classList.add('ativo');
     }
-  }    
+  }
+  botao.addEventListener('click', abrirModal);
 }
